@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Which One Is Larger?</string>
+    <string name="left_btn">Left</string>
+    <string name="right_btn">Right</string>
+    <string name="Score">Your Score is Zero </string>
+    <string name="Step">Round Number Zero </string>
+    <string name="Equal_btn">Equal</string>
+    <string name="score_text">you\'r score is : %d</string>
+    <string name="Finished">Game Finished</string>
+    <string name="Round">You are in Round %s out of 10</string>
+    <string name="Remaining_time">Remaining time : %d second</string>
+</resources>
