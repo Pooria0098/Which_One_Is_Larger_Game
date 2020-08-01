@@ -7,6 +7,7 @@
     <string name="Equal_btn">Equal</string>
     <string name="score_text">you\'r score is : %d</string>
     <string name="Finished">Game Finished</string>
-    <string name="Round">You are in Round %s out of 10</string>
+    <string name="Round">You are in Round %s out of 30</string>
     <string name="Remaining_time">Remaining time : %d second</string>
+    <string name="strat_game">Start Game</string>
 </resources>

@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:clickable="true"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -14,7 +16,6 @@
         android:text="@string/Score"
         android:padding="5dp"
         android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
         android:layout_height="wrap_content">
     </TextView>
     <TextView
@@ -24,7 +25,6 @@
         android:text="@string/Step"
         android:padding="5dp"
         android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
         android:layout_height="wrap_content">
     </TextView>
 

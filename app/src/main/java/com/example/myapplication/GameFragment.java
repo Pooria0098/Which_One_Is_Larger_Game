@@ -23,14 +23,12 @@ public class GameFragment extends Fragment {
     private TextView scoreShowing;
     private TextView gameLevel;
 
-    private int gameLevelInt = 0;
     private int savedRightNumber;
     private int savedLeftNumber;
     private int userPointInt = 0;
     private boolean gameInProgress = false;
     CountDownTimer countDownTimer;
 
-    private final int FINISHED_GAME = 10;
     private final int LEFT_BUTTON = 0;
     private final int RIGHT_BUTTON = 1;
     private final int EQUAL_BUTTON = 2;
@@ -47,6 +45,7 @@ public class GameFragment extends Fragment {
 
         findViews(view);
 
+        // for debugging
         final int[] counter_left = {0};
         final int[] counter_right = {0};
         final int[] counter_equal = {0};
@@ -133,9 +132,6 @@ public class GameFragment extends Fragment {
         if (gameInProgress == false) {
             return;
         }
-        gameLevelInt++;
-        //gameLevel.setText(getString(R.string.Round, String.valueOf(gameLevelInt)));
-
         savedLeftNumber = generateInt();
         savedRightNumber = generateInt();
         leftNumber.setText(String.valueOf(savedLeftNumber));
