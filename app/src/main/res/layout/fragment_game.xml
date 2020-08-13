@@ -38,14 +38,16 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/left_btn">
+            android:text="@string/left_btn"
+            tools:ignore="ButtonStyle">
         </Button>
         <Button
             android:id="@+id/right_num"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/right_btn">
+            android:text="@string/right_btn"
+            tools:ignore="ButtonStyle">
         </Button>
     </LinearLayout>
 

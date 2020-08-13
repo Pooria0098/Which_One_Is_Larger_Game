@@ -7,13 +7,11 @@ import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
     Button startGame;
+    Button shoeBestScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +20,12 @@ public class MainActivity extends AppCompatActivity {
 
         findViews();
         configure();
-//        GameFragment gameFragment=new GameFragment();
-//        getSupportFragmentManager().beginTransaction().
-//                add(R.id.fragment_container,gameFragment).
-//                addToBackStack(null).commit();
+
     }
 
     private void findViews() {
         startGame = findViewById(R.id.start_game);
+        shoeBestScore = findViewById(R.id.show_best_score);
     }
 
     private void configure() {
@@ -39,6 +35,16 @@ public class MainActivity extends AppCompatActivity {
                 GameFragment gameFragment = new GameFragment();
                 getSupportFragmentManager().beginTransaction().
                         add(R.id.fragment_container, gameFragment).
+                        addToBackStack(null).
+                        commit();
+            }
+        });
+        shoeBestScore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BestScoreFragment bestScoreFragment = new BestScoreFragment();
+                getSupportFragmentManager().beginTransaction().
+                        add(R.id.fragment_container,bestScoreFragment).
                         addToBackStack(null).
                         commit();
             }

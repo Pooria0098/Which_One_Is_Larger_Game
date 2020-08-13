@@ -9,5 +9,7 @@
     <string name="Finished">Game Finished</string>
     <string name="Round">You are in Round %s out of 30</string>
     <string name="Remaining_time">Remaining time : %d second</string>
-    <string name="strat_game">Start Game</string>
+    <string name="start_game">Start Game</string>
+    <string name="show_best_score">Show Best Score</string>
+
 </resources>

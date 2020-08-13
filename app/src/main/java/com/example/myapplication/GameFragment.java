@@ -49,6 +49,8 @@ public class GameFragment extends Fragment {
         final int[] counter_left = {0};
         final int[] counter_right = {0};
         final int[] counter_equal = {0};
+        //end_debugging
+
 
         configureViews(leftNumber, counter_left, LEFT_BUTTON, "leftNum");
         configureViews(rightNumber, counter_right, RIGHT_BUTTON, "rightNum");
@@ -66,13 +68,24 @@ public class GameFragment extends Fragment {
                 Log.d("Generate", "countDownTimer onFinish");
                 gameInProgress = false;
                 gameLevel.setText(getString(R.string.Finished));
+                updateHighScore();
             }
         };
         countDownTimer.start();
-        generateOneLevel();
         gameInProgress = true;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        generateOneLevel();
+    }
+
+    private void updateHighScore(){
+        int previousHighScore = MyPreferenceManager.getInstance(getActivity()).getHighScore();
+        if (previousHighScore<userPointInt)
+            MyPreferenceManager.getInstance(getActivity()).putHighScore(userPointInt);
+    }
     @Override
     public void onPause() {
         super.onPause();
